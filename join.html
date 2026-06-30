@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Join | Valleyview Chamber</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="brand-mark">V</div>
+            <div>
+                <p class="eyebrow">Valleyview Chamber</p>
+                <h1>Join</h1>
+            </div>
+        </div>
+
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">Menu</button>
+        <nav id="main-nav" class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" class="active">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero page-hero-join">
+            <div>
+                <p class="eyebrow">Join the chamber</p>
+                <h2>Membership for local businesses and nonprofit organizations.</h2>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <article>
+                <h2>Why join?</h2>
+                <p>Membership gives your business visibility, access to networking, training events, and marketing
+                    support.</p>
+            </article>
+            <article>
+                <h2>Membership levels</h2>
+                <ul>
+                    <li><strong>Nonprofit</strong> — community support and directory listing.</li>
+                    <li><strong>Silver</strong> — event promotion, social shares, and training invites.</li>
+                    <li><strong>Gold</strong> — premium exposure, sponsored features, and advertising support.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="content-section form-section">
+            <form class="membership-form">
+                <h2>Membership application</h2>
+                <label>
+                    Business name
+                    <input type="text" name="business-name" required />
+                </label>
+                <label>
+                    Contact email
+                    <input type="email" name="email" required />
+                </label>
+                <label>
+                    Membership level
+                    <select name="membership-level">
+                        <option value="nonprofit">Nonprofit</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                    </select>
+                </label>
+                <label>
+                    Message
+                    <textarea name="message" rows="4"></textarea>
+                </label>
+                <button type="submit" class="button button-primary">Submit application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <p>Valleyview Chamber of Commerce</p>
+            <p>Promoting local business through support and community engagement.</p>
+        </div>
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W01 Course Home Page | Valleyview Chamber Project</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="brand-mark">V</div>
+            <div>
+                <p class="eyebrow">W01 Assignment</p>
+                <h1>Course Home Page</h1>
+            </div>
+        </div>
+
+        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">Menu</button>
+        <nav id="main-nav" class="site-nav" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">BYU-Idaho WDD231</p>
+                <h2>Course home page for your W01 assignment</h2>
+                <p>This page demonstrates responsive layout, accessible navigation, and dynamic course filtering to fulfill the assignment criteria.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#course-list">View courses</a>
+                    <a class="button button-secondary" href="discover.html">Preview project</a>
+                </div>
+            </div>
+            <div class="hero-image" aria-hidden="true">
+                <div class="image-placeholder">Course Home</div>
+            </div>
+        </section>
+
+        <section class="cards-grid">
+            <article class="card card-feature">
+                <h3>Responsive navigation</h3>
+                <p>The menu adapts for mobile and desktop views and avoids horizontal scrolling.</p>
+            </article>
+            <article class="card">
+                <h3>Course filter</h3>
+                <p>Filter courses by subject, and the list plus credit total update automatically.</p>
+            </article>
+            <article class="card">
+                <h3>Accessible structure</h3>
+                <p>Clear headings, buttons, and footer details support a smooth page audit.</p>
+            </article>
+        </section>
+
+        <section class="content-section" id="course-list">
+            <div class="section-header">
+                <h2>Course list</h2>
+                <p>The course list is generated dynamically from JavaScript and filtered by subject buttons.</p>
+            </div>
+
+            <div class="filter-controls" role="group" aria-label="Filter courses by subject">
+                <button class="filter-button active" type="button" data-subject="all">All</button>
+                <button class="filter-button" type="button" data-subject="web">Web</button>
+                <button class="filter-button" type="button" data-subject="design">Design</button>
+                <button class="filter-button" type="button" data-subject="writing">Writing</button>
+            </div>
+
+            <div class="course-summary">
+                <p><strong id="course-count">0</strong> courses shown</p>
+                <p><strong id="credit-total">0</strong> total credits</p>
+            </div>
+
+            <ul class="course-list" id="course-list-items" aria-live="polite"></ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div>
+            <p>Valleyview Chamber Project</p>
+            <p id="page-year"></p>
+        </div>
+        <div>
+            <p id="last-modified"></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
