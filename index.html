@@ -4,17 +4,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>W01 Course Home Page | Valleyview Chamber Project</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="description"
+        content="WDD 231 course home page for Kenneth Duron with course information, projects, and learning activities." />
+    <meta name="author" content="Kenneth Duron" />
+    <title>W01 Course Home Page | Kenneth Duron</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
     <header class="site-header">
         <div class="brand">
-            <div class="brand-mark">V</div>
+            <div class="brand-logo">
+                <img src="images/logo.svg" alt="KD logo" />
+            </div>
             <div>
                 <p class="eyebrow">W01 Assignment</p>
-                <h1>Course Home Page</h1>
+                <p class="brand-name">Kenneth Duron <span>WDD 231</span></p>
             </div>
         </div>
 
@@ -22,55 +32,41 @@
             aria-label="Toggle navigation">☰</button>
         <nav id="main-nav" class="site-nav" aria-label="Main navigation">
             <a href="index.html" class="active">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html">Join</a>
+            <a href="#">Chamber</a>
+            <a href="#">Final</a>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">BYU-Idaho WDD231</p>
-                <h2>Course home page for your W01 assignment</h2>
-                <p>This page demonstrates responsive layout, accessible navigation, and dynamic course filtering to
-                    fulfill the assignment criteria.</p>
-                <div class="hero-actions">
-                    <a class="button button-primary" href="#course-list">View courses</a>
-                    <a class="button button-secondary" href="discover.html">Preview project</a>
-                </div>
-            </div>
-            <div class="hero-image" aria-hidden="true">
-                <div class="image-placeholder">Course Home</div>
+        <h1>Home</h1>
+
+        <section class="about-card">
+            <h2>About Me</h2>
+            <p>I am Kenneth Duron, a student in WDD 231 at BYU-Idaho. This course home page uses semantic HTML,
+                responsive design, and JavaScript-driven course filtering.</p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="#course-list">View courses</a>
+                <a class="button button-secondary" href="#">View chamber project</a>
             </div>
         </section>
 
-        <section class="cards-grid">
-            <article class="card card-feature">
-                <h3>Responsive navigation</h3>
-                <p>The menu adapts for mobile and desktop views and avoids horizontal scrolling.</p>
-            </article>
-            <article class="card">
-                <h3>Course filter</h3>
-                <p>Filter courses by subject, and the list plus credit total update automatically.</p>
-            </article>
-            <article class="card">
-                <h3>Accessible structure</h3>
-                <p>Clear headings, buttons, and footer details support a smooth page audit.</p>
-            </article>
+        <section class="photo-card">
+            <h2>Student Photo</h2>
+            <img src="images/student-photo.svg" alt="Illustration of a student working on a laptop" />
+            <p>This illustration represents the student building responsive web pages with accessible navigation.</p>
         </section>
 
-        <section class="content-section" id="course-list">
+        <section class="course-section" id="course-list">
             <div class="section-header">
-                <h2>Course list</h2>
-                <p>The course list is generated dynamically from JavaScript and filtered by subject buttons.</p>
+                <h2>Web and Computer Programming Certificate</h2>
+                <p>Use the buttons below to filter courses by subject and calculate the total credits for the visible
+                    selections.</p>
             </div>
 
             <div class="filter-controls" role="group" aria-label="Filter courses by subject">
                 <button class="filter-button active" type="button" data-subject="all">All</button>
-                <button class="filter-button" type="button" data-subject="web">Web</button>
-                <button class="filter-button" type="button" data-subject="design">Design</button>
-                <button class="filter-button" type="button" data-subject="writing">Writing</button>
+                <button class="filter-button" type="button" data-subject="WDD">WDD</button>
+                <button class="filter-button" type="button" data-subject="CSE">CSE</button>
             </div>
 
             <div class="course-summary">
@@ -83,16 +79,19 @@
     </main>
 
     <footer class="site-footer">
-        <div>
-            <p>Valleyview Chamber Project</p>
-            <p id="page-year"></p>
-        </div>
-        <div>
-            <p id="last-modified"></p>
+        <div class="footer-inner">
+            <div class="footer-social">
+                <a href="https://github.com/kennethduron" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <div class="footer-copy">
+                © <span id="currentyear"></span> Kenneth Duron, Honduras
+            </div>
+            <div class="footer-modified">
+                <p id="lastModified"></p>
+            </div>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 
 </html>

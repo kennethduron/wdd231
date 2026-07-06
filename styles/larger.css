@@ -1,0 +1,50 @@
+@media (min-width: 900px) {
+    .site-header {
+        flex-wrap: nowrap;
+        padding: 1.25rem 0;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-nav {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        width: auto;
+        padding: 0;
+    }
+
+    .site-nav a {
+        padding: 0.75rem 1rem;
+    }
+
+    .hero-section {
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .hero-illustration {
+        min-height: 24rem;
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+    .photo-card,
+    .about-card,
+    .course-section {
+        padding: 2rem;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
