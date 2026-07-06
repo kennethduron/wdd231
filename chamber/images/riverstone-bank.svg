@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="riverstoneBankTitle">
+  <title id="riverstoneBankTitle">Riverstone Bank logo</title>
+  <rect width="180" height="120" rx="18" fill="#eef4ff" />
+  <path d="M40 90h100" stroke="#0f4c82" stroke-width="12" stroke-linecap="round" />
+  <path d="M50 90V45h20v45" fill="none" stroke="#0f4c82" stroke-width="12" />
+  <path d="M110 90V55h20v35" fill="none" stroke="#0f4c82" stroke-width="12" />
+  <path d="M45 55h80" fill="none" stroke="#0f4c82" stroke-width="12" />
+</svg>

@@ -1,0 +1,48 @@
+@media (min-width: 768px) {
+    .site-header {
+        flex-wrap: nowrap;
+        padding: 1.5rem 0;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .site-nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.25rem;
+        width: auto;
+        padding: 0;
+    }
+
+    .site-nav a {
+        padding: 0.75rem 1rem;
+    }
+
+    .hero-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .view-toggle {
+        justify-self: end;
+    }
+
+    .directory-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .directory-list .member-card {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+        align-items: start;
+    }
+}

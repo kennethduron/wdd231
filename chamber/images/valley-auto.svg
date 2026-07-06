@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="valleyAutoTitle">
+  <title id="valleyAutoTitle">Valley Auto Care logo</title>
+  <rect width="180" height="120" rx="18" fill="#e9f5ff" />
+  <path d="M40 75h100" stroke="#123d5a" stroke-width="12" stroke-linecap="round" />
+  <circle cx="50" cy="80" r="12" fill="#123d5a" />
+  <circle cx="130" cy="80" r="12" fill="#123d5a" />
+  <path d="M40 75L55 50h70l15 25" fill="none" stroke="#123d5a" stroke-width="12" stroke-linecap="round" />
+</svg>

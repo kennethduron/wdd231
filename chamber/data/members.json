@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Valley Auto Care",
+            "address": "125 Main Street, Valleyview, ST 00000",
+            "phone": "(000) 555-0101",
+            "website": "https://valleyautocare.example.com",
+            "image": "valley-auto.svg",
+            "membership": 3,
+            "category": "Automotive"
+        },
+        {
+            "name": "Green Leaf Cafe",
+            "address": "210 Elm Street, Valleyview, ST 00000",
+            "phone": "(000) 555-0202",
+            "website": "https://greenleafcafe.example.com",
+            "image": "green-leaf.svg",
+            "membership": 2,
+            "category": "Food & Beverage"
+        },
+        {
+            "name": "Summit Dental",
+            "address": "78 Hillcrest Drive, Valleyview, ST 00000",
+            "phone": "(000) 555-0303",
+            "website": "https://summitdental.example.com",
+            "image": "summit-dental.svg",
+            "membership": 3,
+            "category": "Healthcare"
+        },
+        {
+            "name": "Bright Path Academy",
+            "address": "45 Oak Avenue, Valleyview, ST 00000",
+            "phone": "(000) 555-0404",
+            "website": "https://brightpath.example.com",
+            "image": "bright-path.svg",
+            "membership": 1,
+            "category": "Education"
+        },
+        {
+            "name": "Riverstone Bank",
+            "address": "300 River Road, Valleyview, ST 00000",
+            "phone": "(000) 555-0505",
+            "website": "https://riverstonebank.example.com",
+            "image": "riverstone-bank.svg",
+            "membership": 2,
+            "category": "Finance"
+        },
+        {
+            "name": "Northside Fitness",
+            "address": "8 Maple Street, Valleyview, ST 00000",
+            "phone": "(000) 555-0606",
+            "website": "https://northsidefitness.example.com",
+            "image": "northside-fitness.svg",
+            "membership": 1,
+            "category": "Fitness"
+        },
+        {
+            "name": "Golden Spoon Bakery",
+            "address": "62 Pine Street, Valleyview, ST 00000",
+            "phone": "(000) 555-0707",
+            "website": "https://goldenspoonbakery.example.com",
+            "image": "golden-spoon.svg",
+            "membership": 2,
+            "category": "Bakery"
+        }
+    ]
+}

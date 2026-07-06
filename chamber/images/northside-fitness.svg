@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="northsideFitnessTitle">
+  <title id="northsideFitnessTitle">Northside Fitness logo</title>
+  <rect width="180" height="120" rx="18" fill="#f3f9fd" />
+  <path d="M50 85l20-45 20 12 20-12 20 45" fill="none" stroke="#0f4c82" stroke-width="12" stroke-linecap="round" />
+  <circle cx="90" cy="42" r="10" fill="#0f4c82" />
+</svg>

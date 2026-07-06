@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">Valleyview Chamber logo</title>
+  <rect width="100" height="100" rx="20" fill="#123d5a" />
+  <path d="M30 60 L45 40 L55 70 L70 30" fill="none" stroke="#f59e0b" stroke-width="8" stroke-linecap="round" />
+  <circle cx="35" cy="35" r="8" fill="#f59e0b" />
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="greenLeafTitle">
+  <title id="greenLeafTitle">Green Leaf Cafe logo</title>
+  <rect width="180" height="120" rx="18" fill="#f4fbf2" />
+  <path d="M90 30c-22 12-28 40-14 58" fill="none" stroke="#247a3c" stroke-width="14" stroke-linecap="round" />
+  <path d="M90 30c22 12 28 40 14 58" fill="none" stroke="#2c8c45" stroke-width="14" stroke-linecap="round" />
+  <circle cx="90" cy="36" r="10" fill="#247a3c" />
+</svg>

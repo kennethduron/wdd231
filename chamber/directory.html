@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valleyview Chamber Business Directory | Kenneth Duron</title>
+    <meta name="description"
+        content="Business directory for Valleyview Chamber of Commerce featuring local members and membership levels." />
+    <meta name="author" content="Kenneth Duron" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+    <meta property="og:title" content="Valleyview Chamber Business Directory" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/og-image.webp" />
+    <meta property="og:url" content="https://kennethduron.github.io/wdd231/chamber/directory.html" />
+    <meta property="og:description"
+        content="Discover local Valleyview Chamber members in a clean, responsive business directory." />
+    <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="brand">
+                <a href="index.html" class="brand-link">
+                    <img src="images/logo.svg" alt="Valleyview Chamber logo" class="brand-logo" width="48"
+                        height="48" />
+                    <div>
+                        <p class="eyebrow">Valleyview Chamber of Commerce</p>
+                        <p class="brand-name">Business Directory</p>
+                    </div>
+                </a>
+            </div>
+
+            <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <nav id="main-nav" class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="directory.html" class="active" aria-current="page">Directory</a>
+                <a href="join.html">Join</a>
+                <a href="discover.html">Discover</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero-card">
+                <div>
+                    <p class="eyebrow">Chamber Directory</p>
+                    <h1>Business Directory</h1>
+                    <p class="lead-copy">Browse certified members from the Valleyview Chamber of Commerce and filter the
+                        directory between grid and list views.</p>
+                </div>
+                <div class="view-toggle" aria-label="Directory view options">
+                    <button id="grid-view" type="button" class="toggle-button active" aria-pressed="true">Grid</button>
+                    <button id="list-view" type="button" class="toggle-button" aria-pressed="false">List</button>
+                </div>
+            </section>
+
+            <section id="directory" class="directory-grid" aria-live="polite"></section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div>
+                    <p class="footer-brand">Valleyview Chamber of Commerce</p>
+                    <address>
+                        10 Main Street<br />
+                        Valleyview, ST 00000<br />
+                        <a href="mailto:info@valleyviewchamber.org">info@valleyviewchamber.org</a><br />
+                        <a href="tel:+10005551234">(000) 555-1234</a>
+                    </address>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Visit Facebook page">Facebook</a>
+                    <a href="#" aria-label="Visit LinkedIn page">LinkedIn</a>
+                </div>
+                <div class="footer-meta">
+                    <p>Created by Kenneth Duron</p>
+                    <p>WDD 231</p>
+                    <p>&copy; <span id="currentyear"></span></p>
+                    <p>Last modified: <span id="lastModified"></span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

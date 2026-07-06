@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="summitDentalTitle">
+  <title id="summitDentalTitle">Summit Dental logo</title>
+  <rect width="180" height="120" rx="18" fill="#f7fbff" />
+  <path d="M60 85c10 10 30 10 40 0" fill="none" stroke="#0f4c82" stroke-width="14" stroke-linecap="round" />
+  <path d="M60 85c6-18 15-40 30-40s24 22 30 40" fill="none" stroke="#0f4c82" stroke-width="14" stroke-linecap="round" />
+  <path d="M80 40c0 12 16 12 16 0" fill="none" stroke="#0f4c82" stroke-width="12" stroke-linecap="round" />
+</svg>

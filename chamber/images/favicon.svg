@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="favTitle">
+  <title id="favTitle">Valleyview Chamber favicon</title>
+  <rect width="64" height="64" rx="14" fill="#123d5a" />
+  <path d="M20 36h24" stroke="#f59e0b" stroke-width="5" stroke-linecap="round" />
+  <path d="M32 20v28" stroke="#f59e0b" stroke-width="5" stroke-linecap="round" />
+</svg>

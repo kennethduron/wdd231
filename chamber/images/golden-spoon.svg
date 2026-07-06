@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img" aria-labelledby="goldenSpoonTitle">
+  <title id="goldenSpoonTitle">Golden Spoon Bakery logo</title>
+  <rect width="180" height="120" rx="18" fill="#fff2e7" />
+  <path d="M60 45c0 16 38 16 38 0" fill="none" stroke="#b45309" stroke-width="10" stroke-linecap="round" />
+  <path d="M80 45v35" fill="none" stroke="#b45309" stroke-width="10" stroke-linecap="round" />
+  <circle cx="95" cy="35" r="14" fill="#f59e0b" />
+</svg>
