@@ -1,6 +1,6 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('#main-nav');
-const courseList = document.querySelector('#course-list-items');
+const courseList = document.querySelector('#course-list');
 const courseCount = document.querySelector('#course-count');
 const creditTotal = document.querySelector('#credit-total');
 const filterButtons = document.querySelectorAll('.filter-button');
@@ -51,13 +51,13 @@ const courses = [
 ];
 
 function createCourseItem(course) {
-    const listItem = document.createElement('li');
-    listItem.className = 'course-item';
+    const courseCard = document.createElement('div');
+    courseCard.className = 'course-item';
     if (course.completed) {
-        listItem.classList.add('completed');
+        courseCard.classList.add('completed');
     }
 
-    listItem.innerHTML = `
+    courseCard.innerHTML = `
     <h3>${course.code}: ${course.title}</h3>
     <div class="course-meta">
       <span>${course.subject}</span>
@@ -67,15 +67,15 @@ function createCourseItem(course) {
     <p>${course.description}</p>
   `;
 
-    return listItem;
+    return courseCard;
 }
 
-function updateCourseList(subject = 'all') {
+function updateCourseList(filter = 'all') {
     if (!courseList || !courseCount || !creditTotal) return;
 
-    const filteredCourses = subject === 'all'
+    const filteredCourses = filter === 'all'
         ? courses
-        : courses.filter(course => course.subject === subject);
+        : courses.filter(course => course.subject === filter);
 
     courseList.innerHTML = '';
     filteredCourses.forEach(course => courseList.appendChild(createCourseItem(course)));
@@ -85,10 +85,10 @@ function updateCourseList(subject = 'all') {
     creditTotal.textContent = totalCredits;
 }
 
-function updateFilterButtons(activeSubject) {
+function updateFilterButtons(activeFilter) {
     filterButtons.forEach(button => {
-        const subject = button.dataset.subject;
-        button.classList.toggle('active', subject === activeSubject);
+        const filter = button.dataset.filter;
+        button.classList.toggle('active', filter === activeFilter);
     });
 }
 
@@ -115,9 +115,9 @@ function initFooter() {
 function initFilters() {
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const subject = button.dataset.subject;
-            updateFilterButtons(subject);
-            updateCourseList(subject);
+            const filter = button.dataset.filter;
+            updateFilterButtons(filter);
+            updateCourseList(filter);
         });
     });
 }

@@ -44,6 +44,23 @@
         padding: 2rem;
     }
 
+    .profile-image {
+        max-width: 300px;
+    }
+
+    .student-image {
+        max-width: 420px;
+    }
+
+    .about-content {
+        grid-template-columns: 300px minmax(0, 1fr);
+        align-items: center;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .footer-inner {
         grid-template-columns: 1fr 1fr;
     }

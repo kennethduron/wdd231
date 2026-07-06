@@ -17,81 +17,90 @@
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="brand">
-            <div class="brand-logo">
-                <img src="./images/kenneth.jpg" alt="Kenneth Duron" />
-            </div>
-            <div>
-                <p class="eyebrow">W01 Assignment</p>
-                <p class="brand-name">Kenneth Duron <span>WDD 231</span></p>
-            </div>
-        </div>
-
-        <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false"
-            aria-label="Toggle navigation">☰</button>
-        <nav id="main-nav" class="site-nav" aria-label="Main navigation">
-            <a href="index.html" class="active">Home</a>
-            <a href="#">Chamber</a>
-            <a href="#">Final</a>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Home</h1>
-
-        <section class="about-card">
-            <h2>About Me</h2>
-            <p>I am Kenneth Duron, a student in WDD 231 at BYU-Idaho. This course home page uses semantic HTML,
-                responsive design, and JavaScript-driven course filtering.</p>
-            <div class="hero-actions">
-                <a class="button button-primary" href="#course-list">View courses</a>
-                <a class="button button-secondary" href="#">View chamber project</a>
-            </div>
-        </section>
-
-        <section class="photo-card">
-            <h2>Student Photo</h2>
-            <img src="./images/kenneth.jpg" alt="Illustration of a student working on a laptop" />
-            <p>This illustration represents the student building responsive web pages with accessible navigation.</p>
-        </section>
-
-        <section class="course-section" id="course-list">
-            <div class="section-header">
-                <h2>Web and Computer Programming Certificate</h2>
-                <p>Use the buttons below to filter courses by subject and calculate the total credits for the visible
-                    selections.</p>
+    <div class="page-width">
+        <header class="site-header">
+            <div class="brand">
+                <div class="brand-logo">
+                    <img src="images/logo.svg" alt="KD logo" class="logo" width="56" height="56" />
+                </div>
+                <div>
+                    <p class="eyebrow">W01 Assignment</p>
+                    <p class="brand-name">Kenneth Duron <span>WDD 231</span></p>
+                </div>
             </div>
 
-            <div class="filter-controls" role="group" aria-label="Filter courses by subject">
-                <button class="filter-button active" type="button" data-subject="all">All</button>
-                <button class="filter-button" type="button" data-subject="WDD">WDD</button>
-                <button class="filter-button" type="button" data-subject="CSE">CSE</button>
-            </div>
+            <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false"
+                aria-label="Toggle navigation">☰</button>
+            <nav id="main-nav" class="site-nav" aria-label="Main navigation">
+                <a href="index.html" class="active">Home</a>
+                <a href="#">Chamber</a>
+                <a href="#">Final</a>
+            </nav>
+        </header>
 
-            <div class="course-summary">
-                <p><strong id="course-count">0</strong> courses shown</p>
-                <p><strong id="credit-total">0</strong> total credits</p>
-            </div>
+        <main>
+            <h1>Home</h1>
 
-            <ul class="course-list" id="course-list-items" aria-live="polite"></ul>
-        </section>
-    </main>
+            <section class="about-card">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <img src="images/kenneth.jpg" alt="Kenneth Duron" class="profile-image" width="300" height="300" />
+                    <div>
+                        <p>I am Kenneth Duron, a student in WDD 231 at BYU-Idaho. This course home page uses semantic
+                            HTML, responsive design, and JavaScript-driven course filtering.</p>
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="#course-list">View courses</a>
+                            <a class="button button-secondary" href="#">View chamber project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-social">
-                <a href="https://github.com/kennethduron" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+            <section class="photo-card">
+                <h2>Student Photo</h2>
+                <img src="images/student-photo.svg" alt="Illustration of a student working on a laptop"
+                    class="student-image" width="500" height="350" />
+                <p>This illustration represents the student building responsive web pages with accessible navigation.
+                </p>
+            </section>
+
+            <section class="course-section">
+                <div class="section-header">
+                    <h2>Web and Computer Programming Certificate</h2>
+                    <p>Use the buttons below to filter courses by subject and calculate the total credits for the
+                        visible selections.</p>
+                </div>
+
+                <div class="filter-controls" role="group" aria-label="Filter courses by subject">
+                    <button class="filter-button active" type="button" data-filter="all">All</button>
+                    <button class="filter-button" type="button" data-filter="WDD">WDD</button>
+                    <button class="filter-button" type="button" data-filter="CSE">CSE</button>
+                </div>
+
+                <div class="course-summary">
+                    <p><strong id="course-count">0</strong> courses shown</p>
+                    <p><strong id="credit-total">0</strong> total credits</p>
+                </div>
+
+                <div class="course-list" id="course-list" aria-live="polite"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-social">
+                    <a href="https://github.com/kennethduron" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="footer-copy">
+                    © <span id="currentyear"></span> Kenneth Duron, Honduras
+                </div>
+                <div class="footer-modified">
+                    <p id="lastModified"></p>
+                </div>
             </div>
-            <div class="footer-copy">
-                © <span id="currentyear"></span> Kenneth Duron, Honduras
-            </div>
-            <div class="footer-modified">
-                <p id="lastModified"></p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>
