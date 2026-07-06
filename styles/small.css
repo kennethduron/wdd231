@@ -425,9 +425,13 @@ h3 {
     border-color: var(--primary);
 }
 
-.course-item.completed .status-badge,
-.course-item.completed .course-meta span {
-    background: rgba(255, 255, 255, 0.18);
+.course-item.completed .course-meta {
+    color: #ffffff;
+}
+
+.course-item.completed .course-meta span,
+.course-item.completed .status-badge {
+    background: rgba(255, 255, 255, 0.22);
     color: #ffffff;
 }
 

@@ -33,8 +33,8 @@
                 aria-label="Toggle navigation">☰</button>
             <nav id="main-nav" class="site-nav" aria-label="Main navigation">
                 <a href="index.html" class="active">Home</a>
-                <a href="#">Chamber</a>
-                <a href="#">Final</a>
+                <a href="chamber/directory.html">Chamber</a>
+                <a href="join.html">Final</a>
             </nav>
         </header>
 
@@ -48,12 +48,11 @@
                         <img src="images/kenneth.jpg" alt="Kenneth Duron" class="profile-image" width="300"
                             height="300" />
                         <div class="about-copy">
-                            <p>I am Kenneth Duron, a student in WDD 231 at BYU-Idaho. This course home page uses
-                                semantic
-                                HTML, responsive design, and JavaScript-driven course filtering.</p>
+                            <p>I am Kenneth Duron, a BYU-Idaho student in WDD 231. This page keeps a clear view of my certificate classes,
+                                compares WDD and CSE topics, and shows project navigation in a simple, readable layout.</p>
                             <div class="hero-actions">
                                 <a class="button button-primary" href="#course-list">View courses</a>
-                                <a class="button button-secondary" href="#">View chamber project</a>
+                                <a class="button button-secondary" href="chamber/directory.html">View chamber project</a>
                             </div>
                         </div>
                     </div>
@@ -63,9 +62,8 @@
                     <h2>Student Photo</h2>
                     <img src="images/student-photo.svg" alt="Illustration of a student working on a laptop"
                         class="student-image" width="500" height="350" />
-                    <p>This illustration represents the student building responsive web pages with accessible
-                        navigation.
-                    </p>
+                    <p>This illustration shows a student working through a web assignment and practicing a cleaner,
+                        easier-to-use layout.</p>
                 </section>
 
                 <section class="course-section">
@@ -86,7 +84,7 @@
                         <p><strong id="credit-total">0</strong> total credits</p>
                     </div>
 
-                    <div class="course-list" id="course-list" aria-live="polite"></div>
+                    <ul class="course-list" id="course-list" aria-live="polite"></ul>
                 </section>
             </div>
         </main>

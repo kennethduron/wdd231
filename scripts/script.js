@@ -14,7 +14,7 @@ const courses = [
         subject: 'WDD',
         credits: 3,
         completed: true,
-        description: 'Introduction to semantic HTML, responsive layout, and accessible webpages.'
+        description: 'Working with semantic HTML, responsive layout, and accessible design patterns.'
     },
     {
         code: 'WDD 130',
@@ -22,7 +22,7 @@ const courses = [
         subject: 'WDD',
         credits: 3,
         completed: false,
-        description: 'Foundations of CSS, layout systems, and browser-based design tools.'
+        description: 'Reviewing HTML and CSS foundations while building practical page layouts.'
     },
     {
         code: 'CSE 121',
@@ -30,7 +30,7 @@ const courses = [
         subject: 'CSE',
         credits: 3,
         completed: true,
-        description: 'Algorithms, problem solving, and introductory programming concepts.'
+        description: 'Writing program logic and solving problems with code in a structured way.'
     },
     {
         code: 'CSE 231',
@@ -38,7 +38,7 @@ const courses = [
         subject: 'CSE',
         credits: 3,
         completed: false,
-        description: 'JavaScript fundamentals and DOM scripting for interactive webpages.'
+        description: 'Using JavaScript and DOM scripting to make pages interactive and dynamic.'
     },
     {
         code: 'CSE 260',
@@ -46,18 +46,18 @@ const courses = [
         subject: 'CSE',
         credits: 3,
         completed: true,
-        description: 'Design patterns, testing, and code quality for sustainable applications.'
+        description: 'Applying software engineering habits, testing, and organized code design.'
     }
 ];
 
 function createCourseItem(course) {
-    const courseCard = document.createElement('div');
-    courseCard.className = 'course-item';
+    const courseItem = document.createElement('li');
+    courseItem.className = 'course-item';
     if (course.completed) {
-        courseCard.classList.add('completed');
+        courseItem.classList.add('completed');
     }
 
-    courseCard.innerHTML = `
+    courseItem.innerHTML = `
     <h3>${course.code}: ${course.title}</h3>
     <div class="course-meta">
       <span>${course.subject}</span>
@@ -67,7 +67,7 @@ function createCourseItem(course) {
     <p>${course.description}</p>
   `;
 
-    return courseCard;
+    return courseItem;
 }
 
 function updateCourseList(filter = 'all') {
