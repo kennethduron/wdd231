@@ -25,7 +25,7 @@ body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background: var(--background);
+    background: linear-gradient(180deg, #f4f7fb 0%, #e8eff7 100%);
     overflow-x: hidden;
 }
 
@@ -52,9 +52,15 @@ button {
 }
 
 .page-width {
-    width: min(100%, 1100px);
+    width: min(100%, 1120px);
+    max-width: 1120px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
+}
+
+.cards-grid {
+    display: grid;
+    gap: 1.5rem;
 }
 
 .site-header {
@@ -63,9 +69,11 @@ button {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 0.9rem 1rem;
     background: var(--surface);
+    border: 1px solid rgba(18, 61, 90, 0.08);
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 30px rgba(15, 35, 55, 0.05);
 }
 
 .brand {
@@ -158,7 +166,11 @@ button {
 }
 
 main {
-    padding: 2rem 0;
+    padding: 2rem 0 2.5rem;
+}
+
+section {
+    margin-bottom: 1.75rem;
 }
 
 h1,
@@ -210,8 +222,12 @@ h3 {
 
 .about-card {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #d8e2ea;
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 30px rgba(15, 35, 55, 0.08);
     overflow: hidden;
 }
 
@@ -223,17 +239,24 @@ h3 {
 
 .about-copy p {
     max-width: 45rem;
+    line-height: 1.75;
+}
+
+.about-card h2,
+.photo-card h2,
+.course-section h2 {
+    margin-bottom: 0.75rem;
 }
 
 .profile-image {
-    width: min(100%, 260px);
-    max-width: 260px;
+    width: min(100%, 240px);
+    max-width: 240px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
     border-radius: 1rem;
     margin: 0 auto;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 12px 28px rgba(15, 35, 55, 0.1);
 }
 
 .student-image {
@@ -265,6 +288,12 @@ h3 {
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+.section-header p {
+    max-width: 48rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+}
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -289,28 +318,29 @@ h3 {
     transform: translateY(-1px);
 }
 
-.hero-illustration {
-    border-radius: 1.25rem;
-    overflow: hidden;
-    background: linear-gradient(180deg, #dbeafe 0%, #ffffff 100%);
-    min-height: 18rem;
-    display: grid;
-    place-items: center;
-}
-
-.hero-illustration p {
-    text-align: center;
-    color: var(--primary-strong);
-    font-weight: 700;
-}
 
 .photo-card {
     padding: 1.5rem;
+    background: #ffffff;
+    border: 1px solid #d8e2ea;
+    border-radius: 1.25rem;
+    text-align: center;
+    box-shadow: 0 10px 24px rgba(15, 35, 55, 0.06);
+}
+
+.photo-card p {
+    max-width: 34rem;
+    margin: 0 auto;
+    color: var(--muted);
+    line-height: 1.75;
 }
 
 .photo-card img {
-    border-radius: 1.25rem;
-    border: 1px solid var(--border);
+    width: min(100%, 260px);
+    max-width: 260px;
+    margin: 0 auto 1rem;
+    border-radius: 1rem;
+    border: none;
 }
 
 .course-section {
@@ -326,33 +356,44 @@ h3 {
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-bottom: 1rem;
+    justify-content: flex-start;
 }
 
 .filter-button {
-    border: 1px solid var(--border);
-    background: white;
+    border: 1px solid #d8e2ea;
+    background: #ffffff;
     color: var(--primary-strong);
-    font-weight: 600;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.filter-button:hover,
+.filter-button:focus-visible {
+    background: rgba(18, 61, 90, 0.08);
 }
 
 .filter-button.active {
     background: var(--primary);
     color: white;
-    border-color: transparent;
+    border-color: var(--primary);
 }
 
 .course-summary {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: 0.75rem;
+    margin: 1rem 0;
+    justify-content: flex-start;
 }
 
 .course-summary p {
-    background: rgba(18, 61, 90, 0.06);
-    padding: 0.85rem 1rem;
-    border-radius: 0.85rem;
-    font-weight: 600;
+    background: #edf3f7;
+    color: #0f2537;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
 }
 
 .course-list {
@@ -366,25 +407,32 @@ h3 {
     padding: 1.25rem;
     display: grid;
     gap: 0.75rem;
-    border: 1px solid #d8dee9;
-    border-radius: 0.85rem;
+    border: 1px solid #d9e3ec;
+    border-radius: 1rem;
     background: #ffffff;
-    color: #172033;
+    color: #0f2537;
+    box-shadow: 0 10px 24px rgba(15, 35, 55, 0.06);
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.course-item:hover {
+    transform: translateY(-1px);
 }
 
 .course-item.completed {
-    background: #1f5f3b;
+    background: var(--primary);
     color: #ffffff;
-    border-color: #1f5f3b;
+    border-color: var(--primary);
+}
+
+.course-item.completed .status-badge,
+.course-item.completed .course-meta span {
+    background: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
 }
 
 .course-item h3 {
     margin-bottom: 0.35rem;
-}
-
-.course-item.completed {
-    border-color: rgba(88, 117, 255, 0.2);
-    background: #eef2ff;
 }
 
 .course-meta {
@@ -396,36 +444,52 @@ h3 {
 }
 
 .course-meta span {
-    background: rgba(18, 61, 90, 0.08);
+    background: #edf3f7;
     padding: 0.45rem 0.75rem;
     border-radius: 999px;
+    color: #0f2537;
+    letter-spacing: 0.01em;
 }
 
 .status-badge {
     font-weight: 700;
-    color: var(--primary-strong);
+    color: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .site-footer {
-    border-top: 1px solid var(--border);
-    background: var(--surface);
-    padding: 1.5rem 0;
+    background: #ffffff;
+    border-top: 1px solid #d8e2ea;
+    box-shadow: 0 12px 30px rgba(15, 35, 55, 0.06);
+    padding: 1.5rem 0 2rem;
 }
 
 .footer-inner {
     display: grid;
     gap: 1rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(18, 61, 90, 0.08);
+    border-radius: 1rem;
+    background: #ffffff;
+}
+
+.footer-social a {
+    color: var(--primary);
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+    color: var(--accent-strong);
 }
 
 .footer-social {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-}
-
-.footer-social a {
-    color: var(--primary);
-    font-weight: 700;
+    align-items: center;
 }
 
 .footer-copy,
@@ -440,5 +504,9 @@ h3 {
 
     .hero-illustration {
         min-height: 20rem;
+    }
+
+    .course-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

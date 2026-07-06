@@ -41,49 +41,54 @@
         <main>
             <h1>Home</h1>
 
-            <section class="about-card">
-                <h2>About Me</h2>
-                <div class="about-content">
-                    <img src="images/kenneth.jpg" alt="Kenneth Duron" class="profile-image" width="300" height="300" />
-                    <div>
-                        <p>I am Kenneth Duron, a student in WDD 231 at BYU-Idaho. This course home page uses semantic
-                            HTML, responsive design, and JavaScript-driven course filtering.</p>
-                        <div class="hero-actions">
-                            <a class="button button-primary" href="#course-list">View courses</a>
-                            <a class="button button-secondary" href="#">View chamber project</a>
+            <div class="cards-grid">
+                <section class="about-card">
+                    <h2>About Me</h2>
+                    <div class="about-content">
+                        <img src="images/kenneth.jpg" alt="Kenneth Duron" class="profile-image" width="300"
+                            height="300" />
+                        <div class="about-copy">
+                            <p>I am Kenneth Duron, a student in WDD 231 at BYU-Idaho. This course home page uses
+                                semantic
+                                HTML, responsive design, and JavaScript-driven course filtering.</p>
+                            <div class="hero-actions">
+                                <a class="button button-primary" href="#course-list">View courses</a>
+                                <a class="button button-secondary" href="#">View chamber project</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="photo-card">
-                <h2>Student Photo</h2>
-                <img src="images/student-photo.svg" alt="Illustration of a student working on a laptop"
-                    class="student-image" width="500" height="350" />
-                <p>This illustration represents the student building responsive web pages with accessible navigation.
-                </p>
-            </section>
+                <section class="photo-card">
+                    <h2>Student Photo</h2>
+                    <img src="images/student-photo.svg" alt="Illustration of a student working on a laptop"
+                        class="student-image" width="500" height="350" />
+                    <p>This illustration represents the student building responsive web pages with accessible
+                        navigation.
+                    </p>
+                </section>
 
-            <section class="course-section">
-                <div class="section-header">
-                    <h2>Web and Computer Programming Certificate</h2>
-                    <p>Use the buttons below to filter courses by subject and calculate the total credits for the
-                        visible selections.</p>
-                </div>
+                <section class="course-section">
+                    <div class="section-header">
+                        <h2>Web and Computer Programming Certificate</h2>
+                        <p>Use the buttons below to filter courses by subject and calculate the total credits for the
+                            visible selections.</p>
+                    </div>
 
-                <div class="filter-controls" role="group" aria-label="Filter courses by subject">
-                    <button class="filter-button active" type="button" data-filter="all">All</button>
-                    <button class="filter-button" type="button" data-filter="WDD">WDD</button>
-                    <button class="filter-button" type="button" data-filter="CSE">CSE</button>
-                </div>
+                    <div class="filter-controls" role="group" aria-label="Filter courses by subject">
+                        <button class="filter-button active" type="button" data-filter="all">All</button>
+                        <button class="filter-button" type="button" data-filter="WDD">WDD</button>
+                        <button class="filter-button" type="button" data-filter="CSE">CSE</button>
+                    </div>
 
-                <div class="course-summary">
-                    <p><strong id="course-count">0</strong> courses shown</p>
-                    <p><strong id="credit-total">0</strong> total credits</p>
-                </div>
+                    <div class="course-summary">
+                        <p><strong id="course-count">0</strong> courses shown</p>
+                        <p><strong id="credit-total">0</strong> total credits</p>
+                    </div>
 
-                <div class="course-list" id="course-list" aria-live="polite"></div>
-            </section>
+                    <div class="course-list" id="course-list" aria-live="polite"></div>
+                </section>
+            </div>
         </main>
 
         <footer class="site-footer">
