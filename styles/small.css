@@ -1,14 +1,13 @@
 :root {
-    --background: #f6f8fb;
-    --surface: #ffffff;
-    --text: #102a43;
-    --muted: #334e68;
     --primary: #123d5a;
-    --primary-strong: #0d2c43;
-    --accent: #f59e0b;
-    --accent-strong: #b45309;
-    --border: rgba(16, 42, 67, 0.12);
-    --shadow: 0 18px 45px rgba(16, 42, 67, 0.08);
+    --primary-dark: #0b2a40;
+    --accent: #2f6f4e;
+    --background: #eef5fb;
+    --surface: #ffffff;
+    --text: #0f2537;
+    --muted: #516577;
+    --border: #d8e2ea;
+    --shadow: 0 12px 30px rgba(15, 35, 55, 0.08);
 }
 
 * {
@@ -21,11 +20,11 @@ html {
 
 body {
     margin: 0;
-    min-height: 100vh;
-    font-family: 'Inter', system-ui, sans-serif;
-    line-height: 1.6;
+    font-family: 'Inter', Arial, sans-serif;
+    background: var(--background);
     color: var(--text);
-    background: linear-gradient(180deg, #f4f7fb 0%, #e8eff7 100%);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
@@ -52,10 +51,9 @@ button {
 }
 
 .page-width {
-    width: min(100%, 1120px);
-    max-width: 1120px;
+    width: min(100% - 2rem, 1100px);
     margin: 0 auto;
-    padding: 0 1.25rem;
+    padding: 1.25rem;
 }
 
 .cards-grid {
@@ -64,30 +62,32 @@ button {
 }
 
 .site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 6px 18px rgba(15, 35, 55, 0.06);
+}
+
+.header-content {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+    padding: 0.85rem 0;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    padding: 0.9rem 1rem;
-    background: var(--surface);
-    border: 1px solid rgba(18, 61, 90, 0.08);
-    border-radius: 1.25rem;
-    box-shadow: 0 12px 30px rgba(15, 35, 55, 0.05);
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 0.85rem;
+    gap: 0.75rem;
+    font-weight: 700;
+    color: var(--primary-dark);
 }
 
 .brand-logo {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.85rem;
-    background: var(--primary);
-    padding: 0.5rem;
+    width: 48px;
+    height: 48px;
 }
 
 .brand-logo svg {
@@ -184,7 +184,7 @@ h1 {
     font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.05;
     margin-bottom: 1rem;
-    color: var(--primary-strong);
+    color: var(--primary-dark);
 }
 
 h2 {
@@ -222,18 +222,12 @@ h3 {
 
 .about-card {
     display: grid;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    background: #ffffff;
-    border: 1px solid #d8e2ea;
-    border-radius: 1.25rem;
-    box-shadow: 0 12px 30px rgba(15, 35, 55, 0.08);
-    overflow: hidden;
+    gap: 1rem;
 }
 
 .about-content {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
 }
 
@@ -248,15 +242,16 @@ h3 {
     margin-bottom: 0.75rem;
 }
 
-.profile-image {
-    width: min(100%, 240px);
-    max-width: 240px;
-    aspect-ratio: 1 / 1;
+.profile-image,
+.student-photo {
+    width: 220px;
+    height: 220px;
     object-fit: cover;
     object-position: center top;
     border-radius: 1rem;
     margin: 0 auto;
-    box-shadow: 0 12px 28px rgba(15, 35, 55, 0.1);
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 35, 55, 0.15);
 }
 
 .student-image {
@@ -275,17 +270,16 @@ h3 {
 
 .hero-actions {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 1rem;
 }
 
 .button,
 .filter-button {
-    padding: 0.9rem 1.4rem;
+    padding: 0.65rem 1rem;
     border-radius: 999px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
 .section-header p {
@@ -309,8 +303,8 @@ h3 {
 
 .button-secondary {
     background: transparent;
-    border-color: var(--primary);
-    color: var(--primary-strong);
+    border: 1px solid var(--border);
+    color: var(--primary-dark);
 }
 
 .button:hover,
@@ -320,12 +314,7 @@ h3 {
 
 
 .photo-card {
-    padding: 1.5rem;
-    background: #ffffff;
-    border: 1px solid #d8e2ea;
-    border-radius: 1.25rem;
     text-align: center;
-    box-shadow: 0 10px 24px rgba(15, 35, 55, 0.06);
 }
 
 .photo-card p {
@@ -344,7 +333,7 @@ h3 {
 }
 
 .course-section {
-    padding: 1.5rem;
+    padding: 0;
 }
 
 .section-header {
@@ -355,18 +344,15 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
-    margin-bottom: 1rem;
-    justify-content: flex-start;
+    margin: 1rem 0;
 }
 
 .filter-button {
-    border: 1px solid #d8e2ea;
-    background: #ffffff;
-    color: var(--primary-strong);
+    border: 1px solid var(--primary);
+    background: var(--surface);
+    color: var(--primary);
     font-weight: 700;
-    padding: 0.75rem 1rem;
-    border-radius: 999px;
-    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    padding: 0.65rem 1rem;
 }
 
 .filter-button:hover,
@@ -376,43 +362,39 @@ h3 {
 
 .filter-button.active {
     background: var(--primary);
-    color: white;
-    border-color: var(--primary);
+    color: #fff;
 }
 
 .course-summary {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.75rem;
     margin: 1rem 0;
-    justify-content: flex-start;
 }
 
 .course-summary p {
-    background: #edf3f7;
-    color: #0f2537;
-    padding: 0.75rem 1rem;
-    border-radius: 0.75rem;
+    margin: 0;
+    background: #e4eef6;
+    color: var(--primary-dark);
+    padding: 0.7rem 1rem;
+    border-radius: 0.85rem;
     font-weight: 700;
 }
 
 .course-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
     display: grid;
     gap: 1rem;
-    padding: 0;
-    margin: 0;
 }
 
 .course-item {
-    padding: 1.25rem;
-    display: grid;
-    gap: 0.75rem;
-    border: 1px solid #d9e3ec;
+    padding: 1rem;
+    border: 1px solid var(--border);
     border-radius: 1rem;
-    background: #ffffff;
-    color: #0f2537;
-    box-shadow: 0 10px 24px rgba(15, 35, 55, 0.06);
-    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 8px 20px rgba(15, 35, 55, 0.06);
 }
 
 .course-item:hover {
@@ -425,13 +407,9 @@ h3 {
     border-color: var(--primary);
 }
 
-.course-item.completed .course-meta {
-    color: #ffffff;
-}
-
-.course-item.completed .course-meta span,
-.course-item.completed .status-badge {
-    background: rgba(255, 255, 255, 0.22);
+.course-item.completed h3,
+.course-item.completed p,
+.course-item.completed span {
     color: #ffffff;
 }
 
@@ -441,7 +419,6 @@ h3 {
 
 .course-meta {
     display: flex;
-    flex-wrap: wrap;
     gap: 0.75rem;
     font-size: 0.95rem;
     color: var(--muted);
@@ -463,19 +440,18 @@ h3 {
 }
 
 .site-footer {
-    background: #ffffff;
-    border-top: 1px solid #d8e2ea;
-    box-shadow: 0 12px 30px rgba(15, 35, 55, 0.06);
-    padding: 1.5rem 0 2rem;
+    background: var(--primary-dark);
+    color: #ffffff;
+    margin-top: 2rem;
 }
 
-.footer-inner {
+.footer-content {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+    padding: 1rem 0;
     display: grid;
-    gap: 1rem;
-    padding: 0.85rem 1rem;
-    border: 1px solid rgba(18, 61, 90, 0.08);
-    border-radius: 1rem;
-    background: #ffffff;
+    gap: 0.75rem;
+    text-align: center;
 }
 
 .footer-social a {
@@ -501,16 +477,19 @@ h3 {
     color: var(--muted);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 800px) {
     .page-width {
         padding: 0 1.5rem;
     }
 
-    .hero-illustration {
-        min-height: 20rem;
+    .home-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 0.8fr;
+        gap: 1.5rem;
+        align-items: start;
     }
 
     .course-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, 1fr);
     }
 }

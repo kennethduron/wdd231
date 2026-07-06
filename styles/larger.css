@@ -1,7 +1,9 @@
-@media (min-width: 900px) {
-    .site-header {
-        flex-wrap: nowrap;
-        padding: 1.25rem 0;
+@media (min-width: 800px) {
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
     }
 
     .menu-toggle {
@@ -18,45 +20,45 @@
     }
 
     .site-nav a {
-        padding: 0.75rem 1rem;
+        padding: 0.5rem 0.75rem;
     }
 
-    .cards-grid {
+    .home-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr);
+        grid-template-columns: 1.5fr 0.8fr;
         gap: 1.5rem;
         align-items: start;
     }
 
-    .photo-card,
     .about-card,
-    .course-section {
-        padding: 2rem;
+    .photo-card {
+        height: 100%;
     }
 
-    .course-section {
-        grid-column: 1 / -1;
-    }
-
-    .profile-image {
+    .profile-image,
+    .student-photo {
         max-width: 300px;
-    }
-
-    .student-image {
-        max-width: 420px;
-    }
-
-    .about-content {
-        grid-template-columns: 300px minmax(0, 1fr);
-        align-items: center;
     }
 
     .course-list {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .footer-inner {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .footer-content {
+        grid-template-columns: 1fr auto 1fr;
         align-items: center;
+        text-align: left;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-meta {
+        text-align: right;
+    }
+
+    .page-width {
+        max-width: 1100px;
     }
 }

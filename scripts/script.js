@@ -1,100 +1,100 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('#main-nav');
-const courseList = document.querySelector('#course-list');
-const courseCount = document.querySelector('#course-count');
-const creditTotal = document.querySelector('#credit-total');
-const filterButtons = document.querySelectorAll('.filter-button');
-const currentYear = document.querySelector('#currentyear');
-const lastModified = document.querySelector('#lastModified');
 
 const courses = [
     {
-        code: 'WDD 231',
+        subject: 'CSE',
+        number: 110,
+        title: 'Programming Building Blocks',
+        credits: 2,
+        completed: true
+    },
+    {
+        subject: 'WDD',
+        number: 130,
+        title: 'Web Fundamentals',
+        credits: 2,
+        completed: true
+    },
+    {
+        subject: 'CSE',
+        number: 111,
+        title: 'Programming with Functions',
+        credits: 2,
+        completed: true
+    },
+    {
+        subject: 'CSE',
+        number: 210,
+        title: 'Programming with Classes',
+        credits: 2,
+        completed: false
+    },
+    {
+        subject: 'WDD',
+        number: 131,
+        title: 'Dynamic Web Fundamentals',
+        credits: 2,
+        completed: false
+    },
+    {
+        subject: 'WDD',
+        number: 231,
         title: 'Web Frontend Development I',
-        subject: 'WDD',
-        credits: 3,
-        completed: true,
-        description: 'Working with semantic HTML, responsive layout, and accessible design patterns.'
-    },
-    {
-        code: 'WDD 130',
-        title: 'Web Technologies',
-        subject: 'WDD',
-        credits: 3,
-        completed: false,
-        description: 'Reviewing HTML and CSS foundations while building practical page layouts.'
-    },
-    {
-        code: 'CSE 121',
-        title: 'Introduction to Programming',
-        subject: 'CSE',
-        credits: 3,
-        completed: true,
-        description: 'Writing program logic and solving problems with code in a structured way.'
-    },
-    {
-        code: 'CSE 231',
-        title: 'JavaScript for Web Development',
-        subject: 'CSE',
-        credits: 3,
-        completed: false,
-        description: 'Using JavaScript and DOM scripting to make pages interactive and dynamic.'
-    },
-    {
-        code: 'CSE 260',
-        title: 'Software Design Principles',
-        subject: 'CSE',
-        credits: 3,
-        completed: true,
-        description: 'Applying software engineering habits, testing, and organized code design.'
+        credits: 2,
+        completed: false
     }
 ];
 
-function createCourseItem(course) {
-    const courseItem = document.createElement('li');
-    courseItem.className = 'course-item';
-    if (course.completed) {
-        courseItem.classList.add('completed');
+function renderCourses(filter = 'all') {
+    const courseList = document.querySelector('#course-list');
+    const courseCount = document.querySelector('#course-count');
+    const creditTotal = document.querySelector('#credit-total');
+
+    if (!courseList || !courseCount || !creditTotal) {
+        console.error('Course elements are missing.');
+        return;
     }
 
-    courseItem.innerHTML = `
-    <h3>${course.code}: ${course.title}</h3>
-    <div class="course-meta">
-      <span>${course.subject}</span>
-      <span>${course.credits} credits</span>
-      <span class="status-badge">${course.completed ? 'Completed' : 'In progress'}</span>
-    </div>
-    <p>${course.description}</p>
-  `;
-
-    return courseItem;
-}
-
-function updateCourseList(filter = 'all') {
-    if (!courseList || !courseCount || !creditTotal) return;
-
-    const filteredCourses = filter === 'all'
-        ? courses
-        : courses.filter(course => course.subject === filter);
+    const filtered =
+        filter === 'all' ? courses : courses.filter((c) => c.subject === filter);
 
     courseList.innerHTML = '';
-    filteredCourses.forEach(course => courseList.appendChild(createCourseItem(course)));
 
-    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-    courseCount.textContent = filteredCourses.length;
-    creditTotal.textContent = totalCredits;
+    filtered.forEach((course) => {
+        const li = document.createElement('li');
+        li.className = course.completed ? 'course-item completed' : 'course-item';
+        li.innerHTML = `
+            <h3>${course.subject} ${course.number}</h3>
+            <p class="course-title">${course.title}</p>
+            <p class="course-meta">${course.credits} credits</p>
+            <span class="course-status">${course.completed ? 'Completed' : 'In Progress'}</span>
+        `;
+        courseList.appendChild(li);
+    });
+
+    courseCount.textContent = filtered.length;
+    creditTotal.textContent = filtered.reduce((sum, c) => sum + c.credits, 0);
 }
 
-function updateFilterButtons(activeFilter) {
-    filterButtons.forEach(button => {
-        const filter = button.dataset.filter;
-        button.classList.toggle('active', filter === activeFilter);
+function setupFilters() {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    filterButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach((b) => {
+                b.classList.remove('active');
+                b.setAttribute('aria-pressed', 'false');
+            });
+            btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
+            const filter = btn.dataset.filter;
+            renderCourses(filter);
+        });
     });
 }
 
-function initNavigationToggle() {
+function setupNavigation() {
     if (!menuToggle || !mainNav) return;
-
     menuToggle.addEventListener('click', () => {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
         menuToggle.setAttribute('aria-expanded', String(!isExpanded));
@@ -102,27 +102,16 @@ function initNavigationToggle() {
     });
 }
 
-function initFooter() {
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
-    }
-
-    if (lastModified) {
-        lastModified.textContent = `Last modified: ${document.lastModified}`;
-    }
+function setupFooter() {
+    const currentYear = document.querySelector('#currentyear');
+    const lastModified = document.querySelector('#lastModified');
+    if (currentYear) currentYear.textContent = new Date().getFullYear();
+    if (lastModified) lastModified.textContent = `Last modified: ${document.lastModified}`;
 }
 
-function initFilters() {
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const filter = button.dataset.filter;
-            updateFilterButtons(filter);
-            updateCourseList(filter);
-        });
-    });
-}
-
-initNavigationToggle();
-initFooter();
-initFilters();
-updateCourseList();
+document.addEventListener('DOMContentLoaded', () => {
+    setupNavigation();
+    setupFooter();
+    setupFilters();
+    renderCourses();
+});
