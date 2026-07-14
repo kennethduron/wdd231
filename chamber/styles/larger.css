@@ -46,3 +46,33 @@
         align-items: start;
     }
 }
+/* W03 Chamber home page */
+@media (min-width: 768px) {
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero-image {
+        height: 420px;
+    }
+
+    .hero-overlay {
+        padding: 3rem;
+    }
+
+    .home-grid {
+        grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+
+    .events-card,
+    .weather-card,
+    .spotlights-card {
+        padding: 1.5rem;
+    }
+
+    .spotlight-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

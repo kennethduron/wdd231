@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Downtown business district for Valleyview Chamber of Commerce</title>
+  <desc id="desc">A clean illustrated downtown street with local businesses, offices, trees, and people gathered near storefronts.</desc>
+  <rect width="1200" height="600" fill="#dcebf4"/>
+  <rect y="360" width="1200" height="240" fill="#f4f7fb"/>
+  <path d="M0 345h1200v70H0z" fill="#7895a9"/>
+  <path d="M0 415h1200v70H0z" fill="#102a43"/>
+  <path d="M0 448h1200" stroke="#f8fafc" stroke-width="8" stroke-dasharray="70 46"/>
+  <circle cx="1020" cy="98" r="48" fill="#f59e0b"/>
+  <path d="M90 255h165v110H90z" fill="#ffffff"/>
+  <path d="M90 220h165v42H90z" fill="#123d5a"/>
+  <path d="M115 284h38v55h-38zM170 284h62v28h-62z" fill="#dcebf4"/>
+  <path d="M112 235h121" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M292 170h150v195H292z" fill="#ffffff"/>
+  <path d="M292 142h150v34H292z" fill="#f59e0b"/>
+  <path d="M318 198h32v32h-32zM384 198h32v32h-32zM318 258h32v32h-32zM384 258h32v32h-32z" fill="#cfe0eb"/>
+  <path d="M466 225h180v140H466z" fill="#ffffff"/>
+  <path d="M466 196h180v36H466z" fill="#0d2c43"/>
+  <path d="M493 250h120v22H493zM493 292h82v22h-82z" fill="#dcebf4"/>
+  <path d="M675 130h165v235H675z" fill="#ffffff"/>
+  <path d="M701 158h34v34h-34zM780 158h34v34h-34zM701 220h34v34h-34zM780 220h34v34h-34zM701 282h34v34h-34zM780 282h34v34h-34z" fill="#cfe0eb"/>
+  <path d="M870 245h190v120H870z" fill="#ffffff"/>
+  <path d="M870 214h190v38H870z" fill="#2f6f5f"/>
+  <path d="M900 272h48v64h-48zM970 272h58v30h-58z" fill="#dcebf4"/>
+  <path d="M1080 305h54v60h-54z" fill="#ffffff"/>
+  <path d="M1075 284h64v28h-64z" fill="#f59e0b"/>
+  <path d="M50 365h1120" stroke="#c9d7e2" stroke-width="8"/>
+  <path d="M195 350c0-27 22-49 49-49s49 22 49 49" fill="#2f6f5f"/>
+  <path d="M244 350v55" stroke="#6f4e37" stroke-width="12" stroke-linecap="round"/>
+  <path d="M930 350c0-27 22-49 49-49s49 22 49 49" fill="#2f6f5f"/>
+  <path d="M979 350v55" stroke="#6f4e37" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="550" cy="386" r="17" fill="#f59e0b"/>
+  <path d="M532 435c3-29 13-44 18-44s16 15 19 44" stroke="#123d5a" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="604" cy="386" r="17" fill="#0d2c43"/>
+  <path d="M586 435c3-29 13-44 18-44s16 15 19 44" stroke="#2f6f5f" stroke-width="13" stroke-linecap="round"/>
+  <path d="M731 380h86c28 0 51 23 51 51v12H680v-12c0-28 23-51 51-51z" fill="#f59e0b"/>
+  <circle cx="725" cy="448" r="27" fill="#102a43"/>
+  <circle cx="824" cy="448" r="27" fill="#102a43"/>
+  <circle cx="725" cy="448" r="11" fill="#f8fafc"/>
+  <circle cx="824" cy="448" r="11" fill="#f8fafc"/>
+  <path d="M690 393h62v38h-82c2-16 9-29 20-38zM764 393h47c16 0 30 8 39 20l-86 18z" fill="#ffffff"/>
+  <path d="M0 515h1200v85H0z" fill="#f4f7fb"/>
+</svg>

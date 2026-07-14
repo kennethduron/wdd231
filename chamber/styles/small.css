@@ -352,3 +352,184 @@ footer address {
         justify-content: flex-end;
     }
 }
+/* W03 Chamber home page */
+.hero {
+    position: relative;
+    min-height: 320px;
+    margin: 0 0 1.5rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.hero-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    align-content: center;
+    gap: 0.95rem;
+    padding: 1.5rem;
+    background: linear-gradient(90deg, rgba(13, 44, 67, 0.88), rgba(13, 44, 67, 0.48));
+    color: #ffffff;
+}
+
+.hero-overlay h1 {
+    margin: 0;
+    max-width: 46rem;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.05;
+}
+
+.hero-overlay p {
+    margin: 0;
+    max-width: 42rem;
+    color: #ffffff;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.85rem 1.1rem;
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(16, 42, 67, 0.2);
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+    background: var(--accent-soft);
+    color: var(--primary-strong);
+}
+
+.home-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.events-card,
+.weather-card,
+.spotlights-card,
+.spotlight-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow);
+    padding: 1.25rem;
+}
+
+.events-card h2,
+.weather-card h2,
+.spotlights-card h2 {
+    margin: 0 0 1rem;
+    color: var(--primary-strong);
+    line-height: 1.2;
+}
+
+.event-list {
+    display: grid;
+    gap: 0.85rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.event-list li {
+    display: grid;
+    gap: 0.2rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.event-list li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.event-list span,
+.weather-card p,
+.spotlight-card p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #f8fafc;
+}
+
+.current-weather img {
+    width: 4rem;
+    height: 4rem;
+    flex: 0 0 auto;
+}
+
+.forecast {
+    margin-top: 1rem;
+}
+
+.forecast h3,
+.spotlight-card h3 {
+    margin: 0 0 0.75rem;
+    color: var(--primary-strong);
+    line-height: 1.2;
+}
+
+.forecast-list,
+.spotlight-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.forecast-item {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    border-radius: 0.85rem;
+    background: rgba(18, 61, 90, 0.07);
+}
+
+.spotlights-card {
+    margin-top: 1.5rem;
+}
+
+.section-heading {
+    margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+    margin-top: 0.35rem;
+}
+
+.spotlight-card {
+    display: grid;
+    justify-items: start;
+    gap: 0.65rem;
+}
+
+.spotlight-card img {
+    width: 6rem;
+    height: 6rem;
+    justify-self: center;
+    object-fit: contain;
+    margin-bottom: 0.35rem;
+}
+
+.spotlight-card a {
+    font-weight: 700;
+}
