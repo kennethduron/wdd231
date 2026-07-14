@@ -8,7 +8,7 @@ const weatherIcon = document.querySelector('#weather-icon');
 const forecastList = document.querySelector('#forecast-list');
 const spotlightList = document.querySelector('#spotlight-list');
 
-const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
+const apiKey = '8f3b5dd4a4fe6b5ebe68687215fd671f';
 const weatherLat = 15.5042;
 const weatherLon = -88.0250;
 const weatherUnits = 'imperial';
