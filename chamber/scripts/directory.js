@@ -55,11 +55,17 @@ function renderMembers(members) {
         phone.textContent = member.phone;
         phone.className = 'member-phone';
 
+        const website = document.createElement('a');
+        website.href = member.website;
+        website.target = '_blank';
+        website.rel = 'noopener';
+        website.textContent = 'Visit Website';
+        website.className = 'member-website';
         const membership = document.createElement('p');
         membership.textContent = `Membership: ${member.membership === 3 ? 'Gold' : member.membership === 2 ? 'Silver' : 'Member'}`;
         membership.className = `member-level level-${member.membership}`;
 
-        details.append(address, phone, membership);
+        details.append(address, phone, website, membership);
 
         if (currentView === 'grid') {
             const figure = document.createElement('figure');

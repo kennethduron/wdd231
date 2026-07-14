@@ -493,3 +493,134 @@ h3 {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+/* Visual polish pass: W01 home */
+:root {
+    --primary-strong: #0b2a40;
+    --accent-strong: #0f5c3d;
+}
+
+.page-width {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+    padding: 1.5rem 0 2rem;
+}
+
+section {
+    margin-bottom: 1.25rem;
+}
+
+.site-header {
+    position: relative;
+    background: #ffffff;
+}
+
+.header-content {
+    padding: 0.8rem 0;
+}
+
+.brand img,
+.logo {
+    width: 48px;
+    height: 48px;
+}
+
+.about-card,
+.photo-card,
+.course-section {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 1.15rem;
+    box-shadow: var(--shadow);
+    padding: 1.15rem;
+}
+
+.about-content {
+    gap: 1.1rem;
+}
+
+.profile-image,
+.student-photo,
+.photo-card img {
+    width: 220px;
+    height: 220px;
+    max-width: 220px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 1rem;
+}
+
+.course-section {
+    grid-column: 1 / -1;
+}
+
+.course-item {
+    min-height: auto;
+    padding: 0.95rem;
+}
+
+.course-title {
+    color: var(--muted);
+}
+
+.course-item.completed .course-title,
+.course-item.completed .course-meta,
+.course-item.completed .course-status {
+    color: #ffffff;
+}
+
+.course-status {
+    display: inline-flex;
+    width: fit-content;
+    margin-top: 0.7rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 999px;
+    background: #e8f0f6;
+    color: #0f2537;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.course-item.completed .course-status {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.site-footer {
+    background: #0b2a40;
+    color: #ffffff;
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.footer-inner,
+.footer-content {
+    width: min(100% - 2rem, 1100px);
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: grid;
+    gap: 0.75rem;
+    text-align: center;
+}
+
+.site-footer a,
+.site-footer p,
+.site-footer span,
+.footer-copy,
+.footer-modified,
+.footer-modified p {
+    color: #ffffff;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: #f2b84b;
+}
